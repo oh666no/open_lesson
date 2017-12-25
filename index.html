@@ -11,10 +11,47 @@
 	<link rel="stylesheet" href="css/normalize.css" />
 	<link rel="stylesheet" href="css/layout.css" />
 	<link rel="stylesheet" href="css/style.css" />
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,800" rel="stylesheet">
 
 </head>
 <body>
-
-
+	<div class="hero-scene">
+		<div class="container">
+			<div class="header">
+				<img class="main_logo" src="imgs/2017-Beetroot-Academy-2-5.svg" alt="logo">
+				<div class="menu_icon">Menu</div>
+			</div>
+			<div class="main_content">
+				<p>Хочете дізнаватитсь про новини Beetroot першими?</p>
+				<h1>Залиште вашу електронну пошту, і ми Вам будемо писати ;)</h1>
+				<form class="email" name="get_email" action="index.php" method="post">
+					<input type="text" class="email_field" name="email" value="">
+					<input type="submit" id="submit" name="submit" value="Залишити">
+				</form>
+				<p class="hint">Не хвилюйтесь, ми нікому не покажемо вашу адресу</p>
+			</div>
+		</div>
+	</div>
+	<div id="menu" class="">
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="https://beetroot.se/">Beetroot</a></li>
+			<li><a href="https://academy.beetroot.se/">Beetroot Academy</a></li>
+		</ul>
+	</div>
+	<div id="fade"></div>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script>
+		jQuery(document).ready(function(){
+			$(".menu_icon").click(function(){
+				$("#menu").toggleClass("opened");
+				$("#fade").toggleClass("shown");
+			});
+			$("#fade").click(function(){
+				$("#menu").toggleClass("opened");
+				$("#fade").toggleClass("shown");
+			});
+		});
+	</script>
 </body>
 </html>
